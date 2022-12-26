@@ -117,6 +117,9 @@ foreach ($total['arr'] as $row) {
                             <thead class="bg-gray-100">
                                 <tr>
                                     <th class="px-6 py-2 text-xs text-gray-500">
+                                        Name
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
                                         Amount
                                     </th>
                                     <th class="px-6 py-2 text-xs text-gray-500">
@@ -141,6 +144,8 @@ foreach ($total['arr'] as $row) {
                                 for ($i = 0; $i < count($allPayment['arr']); $i++) :
                                 ?>
                                 <tr class="whitespace-nowrap">
+                                    <td class="px-6 py-4 text-sm text-center text-gray-500">
+                                        <?php echo $allPayment['arr'][$i]['amount']; ?></td>
                                     <td class="px-6 py-4 text-sm text-center text-gray-500">
                                         <?php echo $allPayment['arr'][$i]['amount']; ?>
                                     </td>

@@ -20,12 +20,13 @@ if (isset($_SESSION['username']) != '')
 
 <body class="bg-slate-800 font-['Montserrat']">
     <?php include 'etc/login_alertsModal.php'; ?>
-    <form action="includes/login.inc.php" method="post">
-        <div class="flex justify-center items-center h-screen">
-            <div class="w-96 p-6 shadow-lg bg-white rounded-md">
-                <h1 class="border-b block text-3xl text-center text-semibold"><i class="fa-sharp fa-solid fa-users"></i>
-                    Login</h1>
-                <div class="mt-6">
+
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-96 p-6 shadow-lg bg-white rounded-md">
+            <h1 class="border-b block text-3xl text-center text-semibold"><i class="fa-sharp fa-solid fa-users"></i>
+                Login</h1>
+            <div class="mt-6">
+                <form action="includes/login.inc.php" method="post">
                     <label for="username" class="block text-base mb-2 ">Username</label>
                     <input type="text" id="username" name="username"
                         class="border w-full text-base mb-2 px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
@@ -37,11 +38,23 @@ if (isset($_SESSION['username']) != '')
 
                     <button type="submit" name="login_btn"
                         class="w-full py-3 bg-slate-800 text-white mt-2 hover:bg-transparent hover:text-slate-900 border">Login</button>
-                </div>
+                </form>
             </div>
-        </div>
-    </form>
 
+            <button type="button" id='gotoregister'
+                class="w-full py-3 bg-slate-800 text-white mt-2 hover:bg-transparent hover:text-slate-900 border">Register</button>
+        </div>
+    </div>
 </body>
+
+
+
+
+<script>
+const gotoregister = document.querySelector('#gotoregister');
+gotoregister.addEventListener('click', function() {
+    location.href = "register.php";
+})
+</script>
 
 </html>

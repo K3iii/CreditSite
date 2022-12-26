@@ -23,7 +23,16 @@ if (params['error'] == 'wrongpassword') {
     Swal.fire({
         icon: 'error',
         title: 'Wrong Credentials',
-        text: 'Please check your username or password'
+        text: 'Please check your username or password',
+        confirmButtonText: 'Register',
+        showCancelButton: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            location.href = "register.php";
+        } else {
+
+        }
+
     })
     window.history.pushState("object or string", "Title", "/" + "CreditSite/login.php");
 }

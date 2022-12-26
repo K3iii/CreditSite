@@ -75,7 +75,7 @@ class userTable extends DB
 
     protected function allPayment()
     {
-        $query = "SELECT * FROM payment";
+        $query = "SELECT users.name, pay.* FROM users users, payment pay WHERE users.user_id = pay.user_id";
         $statemt = $this->connect()->query($query);
         if (!$statemt)
             header("location: ../index.php?error=didnotgetData");

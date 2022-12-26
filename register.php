@@ -21,7 +21,7 @@ if (isset($_SESSION['username']) != '')
     <div class="flex justify-center items-center h-screen">
         <div class="w-96 p-6 shadow-lg bg-white rounded-md">
             <h1 class="border-b block text-3xl text-center text-semibold"><i class="fa-sharp fa-solid fa-users"></i>
-                Login</h1>
+                Register</h1>
             <div class="mt-6">
                 <form action="includes/signup.inc.php" method="post">
                     <label for="username" class="block text-base mb-2 ">Username</label>
@@ -46,12 +46,21 @@ if (isset($_SESSION['username']) != '')
                         placeholder="Enter Email">
 
                     <button type="submit" name="signup_btn"
-                        class="w-full py-3 bg-slate-800 text-white mt-2 hover:bg-transparent hover:text-slate-900 border">Login</button>
+                        class="w-full py-3 bg-slate-800 text-white mt-2 hover:bg-transparent hover:text-slate-900 border">Register</button>
                 </form>
+                <button id='backtologin'
+                    class="w-full py-3 bg-slate-800 text-white mt-2 hover:bg-transparent hover:text-slate-900 border">Back
+                    to Login</button>
             </div>
         </div>
     </div>
 
 </body>
+<script>
+const backtologin = document.querySelector('#backtologin');
+backtologin.addEventListener('click', function() {
+    location.href = "login.php";
+})
+</script>
 
 </html>
