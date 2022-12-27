@@ -3,5 +3,5 @@ tailwindcss
 index_old.php
 mailer.php
 payment_receipt
-includes/auth_check.php
-includes/session.inc.php
+/includes/auth_check.php
+/includes/session.inc.php
