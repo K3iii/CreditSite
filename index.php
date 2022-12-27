@@ -148,24 +148,6 @@ else :
         </div>
         <?php endfor; ?>
 
-        <!-- <div class=" grid grid-cols-1 gap-4 md:hidden mb-2">
-            <div class="bg-white p-4 rounded-lg shadow">
-                <div class="flex items-center space-x-2 text-sm">
-                    <div class="text-medium"><span class="font-bold hover:underline text-red-900">&#8369; 100</span>
-                    </div>
-                    <div class="font-bold">Date</div>
-                    <div>
-                        <span
-                            class="p-1.5 text-sm font-medium tracking-wider rounded-lg bg-opacity-50 text-green-700 bg-green-300">
-                            Confirmed
-                        </span>
-                    </div>
-                </div>
-                <div class="mt-10">
-                    <a href="http://">Link ng Resibo</a>
-                </div>
-            </div>
-        </div> -->
 
 
 

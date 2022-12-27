@@ -3,7 +3,6 @@
 
 
         <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-            <!-- &#9776; -->
             <div
                 class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
             </div>
@@ -52,9 +51,6 @@
     </section>
     <section id="mobile-menu"
         class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
-        <!-- <button class="text-8xl self-end px-6">
-                        &times;
-                    </button> -->
         <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
             <a href="../index.php" class="w-full py-6 text-white text-center hover:opacity-90">Home</a>
             <a href="mailto:jm@jmprofile.link" class="w-full text-white py-6 text-center hover:opacity-90">Contact

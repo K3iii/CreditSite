@@ -15,23 +15,4 @@ class Payment extends DB
 
         $statemnt = null;
     }
-
-    // protected function checkUser($uid, $email)
-    // {
-    //     $statemnt = $this->connect()->prepare('SELECT username FROM users WHERE username = ? OR email = ?;');
-
-    //     if (!$statemnt->execute(array($uid, $email))) {
-    //         $statemnt = null;
-    //         header("location: ../index.php?error=statemntfailed");
-    //         exit();
-    //     }
-
-    //     $resultCheck = true;
-
-    //     if ($statemnt->rowCount() > 0) {
-    //         $resultCheck = false;
-    //     }
-
-    //     return $resultCheck;
-    // }
 }

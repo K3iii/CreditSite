@@ -1,12 +1,11 @@
 <?php
-// include '../classes/db.classes.php';
 class userTable extends DB
 {
     protected function getTable($id)
     {
         $query = "SELECT * FROM payment WHERE user_id = $id";
         $statemt = $this->connect()->query($query);
-        $arr['arr'] = array(); // added
+        $arr['arr'] = array();
         if (!$statemt) {
             echo 'error';
         } else {
@@ -27,8 +26,7 @@ class userTable extends DB
     {
         $query = "SELECT amount,pay_status FROM payment WHERE user_id = $id";
         $statemt = $this->connect()->query($query);
-        $total['arr'] = array(); // added
-        // $total = 0;
+        $total['arr'] = array();
         if (!$statemt)
             header("location: ../index.php?error=didnotgetData");
         else {
