@@ -9,6 +9,7 @@ if (isset($_POST['addpayment'])) {
     $receipttmp = $_FILES['receipt']['tmp_name'];
     $uid = $_SESSION['username'];
     $user_id = $_SESSION['userid'];
+    $summary = $_POST['summary'];
 
 
     //initialize
@@ -16,7 +17,7 @@ if (isset($_POST['addpayment'])) {
     include '../classes/db.classes.php';
     include '../classes/payment.classes.php';
     include '../classes/payment-contr.classes.php';
-    $payment = new PaymentContr($amount, $receipt, $date, $receipttmp, $uid, $user_id);
+    $payment = new PaymentContr($amount, $receipt, $date, $receipttmp, $uid, $user_id, $summary);
     //running error
 
     $payment->submitPay();

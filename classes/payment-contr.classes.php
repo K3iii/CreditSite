@@ -10,8 +10,9 @@ class PaymentContr extends Payment
     private $uid;
     private $tmpFolder;
     private $user_id;
+    private $summary;
 
-    public function __construct($amount, $receipt, $date, $receipttmp, $uid, $user_id)
+    public function __construct($amount, $receipt, $date, $receipttmp, $uid, $user_id, $summary)
     {
         $this->amount = $amount;
         $this->receipt = $receipt;
@@ -19,6 +20,7 @@ class PaymentContr extends Payment
         $this->receipttmp = $receipttmp;
         $this->uid = $uid;
         $this->user_id = $user_id;
+        $this->summary = $summary;
     }
 
     public function submitPay()
@@ -34,7 +36,7 @@ class PaymentContr extends Payment
         $this->tmpFolder = "payment_receipt/$this->uid/" . $this->receipt;
 
 
-        $this->setPayment($this->user_id, $this->amount, $this->tmpFolder, $this->date);
+        $this->setPayment($this->user_id, $this->amount, $this->tmpFolder, $this->date, $this->summary);
     }
 
     private function checkAmount()
@@ -56,7 +58,5 @@ class PaymentContr extends Payment
             move_uploaded_file($this->receipttmp, $pathfolder);
             return true;
         }
-        // move_uploaded_file($this->receipttmp, "../includes/payment/$this->uid/");
-        // return true;
     }
 }

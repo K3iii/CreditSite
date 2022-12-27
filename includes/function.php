@@ -13,18 +13,9 @@ class userTable extends DB
             while ($row = $statemt->fetchAll(PDO::FETCH_ASSOC)) {
                 $arr['arr'] = $row;
             }
-            // $arr = json_encode($arr);
+
             return $arr;
         }
-        // $statemt->bindParam("sss", $id);
-        // $statemt->execute();
-
-        // $result = $statemt->fetchAll(PDO::FETCH_ASSOC);
-
-        // print_r($result[0]);
-        // return 1;
-
-
     }
 
     public function tryMe($id)
@@ -34,7 +25,7 @@ class userTable extends DB
 
     protected function getTotal($id)
     {
-        $query = "SELECT amount FROM payment WHERE user_id = $id";
+        $query = "SELECT amount,pay_status FROM payment WHERE user_id = $id";
         $statemt = $this->connect()->query($query);
         $total['arr'] = array(); // added
         // $total = 0;
@@ -98,14 +89,7 @@ class userTable extends DB
         $statemt = $this->connect()->query($query);
         if (!$statemt)
             header("location: ../index.php?error=didnotgetData");
-        //     else {
-        //         while ($row = $statemt->fetchAll(PDO::FETCH_ASSOC)) {
-        //             $total['arr'] = $row;
-        //         }
-        //         return $total;
-        //     }
-        // echo "<meta http-equiv='refresh' content='0'>";
-        // echo "";
+        echo "<meta http-equiv='refresh' content='0'>";
     }
 
     public function payConfirm($id)

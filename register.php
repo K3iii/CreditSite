@@ -1,7 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION['username']) != '')
+if (isset($_SESSION['username']) != '') :
     header("location: index.php?error=alreadylog");
+else :
 ?>
 
 <!DOCTYPE html>
@@ -64,3 +65,5 @@ backtologin.addEventListener('click', function() {
 </script>
 
 </html>
+
+<?php endif; ?>
