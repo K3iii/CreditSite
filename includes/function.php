@@ -96,4 +96,21 @@ class userTable extends DB
     {
         return $this->payStatus($id);
     }
+
+    protected function getUsers()
+    {
+        $query = "SELECT user_id, name FROM users";
+        $statemt = $this->connect()->query($query);
+        if (!$statemt)
+            header("location: ../index.php?error=didnotgetData");
+        while ($row = $statemt->fetchAll(PDO::FETCH_ASSOC)) {
+            $users['arr'] = $row;
+        }
+        return $users;
+    }
+
+    public function adBalUser()
+    {
+        return $this->getUsers();
+    }
 }

@@ -10,12 +10,11 @@
         </button>
 
         <nav class="hidden sm:inline space-x-2 text-fountain-blue-500" aria-label="main">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="../index.php" target="_blank" rel="noopener noreferrer">
                 <img src="../assets/img/credit-logo-1.png" alt="" srcset="" class="inline h-12">
             </a>
             <a href="../index.php" class="hover:opacity-90 family-serif ">Homepage</a>
-            <a href="#payment-modal" id="login" class="hover:opacity-90">Pay Me</a>
-            <a href="http://" class="hover:opacity-90">Contact Me</a>
+            <a href="#Add_Balance" id="adbal" class="hover:opacity-90">Add Balance</a>
 
         </nav>
         <nav class="text-fountain-blue-500 flex justify-end items-center">
@@ -58,9 +57,8 @@
                     </button> -->
         <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
             <a href="../index.php" class="w-full py-6 text-white text-center hover:opacity-90">Home</a>
-            <a href="#payment-modal" id="login" class="w-full py-6 text-white text-center hover:opacity-90">Pay
+            <a href="mailto:jm@jmprofile.link" class="w-full text-white py-6 text-center hover:opacity-90">Contact
                 Me</a>
-            <a href="#contact" class="w-full text-white py-6 text-center hover:opacity-90">Contact Me</a>
             <a href="includes/logout.inc.php" class="w-full py-6 text-white text-center hover:opacity-90">Logout</a>
 
         </nav>

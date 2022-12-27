@@ -31,10 +31,11 @@ else :
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin PAge</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/custom_style.css">
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin_user.js" defer></script>
     <?php include '../includes/plugins.php'; ?>
 
 </head>
@@ -71,9 +72,6 @@ else :
                                     <th class="px-6 py-2 text-xs text-gray-500">
                                         Status
                                     </th>
-                                    <!-- <th class="px-6 py-2 text-xs text-gray-500">
-                                        Edit
-                                    </th> -->
                                     <th class="px-6 py-2 text-xs text-gray-500">
                                         Approve
                                     </th>
@@ -119,10 +117,6 @@ else :
                                         </span>
                                         <?php endif; ?>
                                     </td>
-                                    <!-- <td class="px-6 py-4 text-center">
-                                        <a href="#"
-                                            class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Edit</a>
-                                    </td> -->
                                     <td class="px-6 py-4 text-center">
                                         <form action="" method="post">
                                             <input type="hidden"
